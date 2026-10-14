@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="QLSP.Master.cs" Inherits="QuanLySanPham.QLSP" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>ASP.NET Web Forms MasterPage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div class="page">
+
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-globe logo-icon"></i>
+                <div>
+                    <div class="logo-title">ASP.NET</div>
+                    <div class="logo-sub">Web Forms MasterPage</div>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-laptop"></i><span>HỆ THỐNG</span></a>
+                <a href="#"><i class="far fa-file-alt"></i><span>HỒ SƠ</span></a>
+                <a href="#"><i class="fas fa-chart-bar"></i><span>BÁO CÁO</span></a>
+                <a href="#"><i class="fas fa-desktop"></i><span>ỨNG DỤNG</span></a>
+            </div>
+        </div>
+
+        <div class="topnav">
+            <div class="topnav-left">
+                <asp:HyperLink ID="lnkNavTrangChu" runat="server" NavigateUrl="~/Default.aspx">Trang Chủ</asp:HyperLink>
+                <asp:HyperLink ID="lnkNavGioiThieu" runat="server" NavigateUrl="#">Giới thiệu</asp:HyperLink>
+                <asp:HyperLink ID="lnkNavThongKe" runat="server" NavigateUrl="#">Thống kê</asp:HyperLink>
+                <asp:HyperLink ID="lnkNavSanPham" runat="server" NavigateUrl="~/quanlysanpham.aspx">Sản phẩm</asp:HyperLink>
+                <asp:HyperLink ID="lnkNavLienHe" runat="server" NavigateUrl="#">Liên hệ</asp:HyperLink>
+            </div>
+            <div class="topnav-right">
+                <a href="#">Đăng nhập <i class="fas fa-user"></i></a>
+            </div>
+        </div>
+
+        <div class="body-wrap">
+            <div class="sidebar">
+                <asp:HyperLink ID="lnkTrangChu" runat="server" NavigateUrl="~/Default.aspx"><i class="fas fa-home"></i> Trang chủ</asp:HyperLink>
+                <asp:HyperLink ID="lnkTheLoai" runat="server" NavigateUrl="#"><i class="fas fa-tags"></i> Quản lý thể loại</asp:HyperLink>
+                <asp:HyperLink ID="lnkSanPham" runat="server" NavigateUrl="~/quanlysanpham.aspx"><i class="fas fa-box"></i> Quản lý sản phẩm</asp:HyperLink>
+                <asp:HyperLink ID="lnkDangNhap" runat="server" NavigateUrl="#"><i class="fas fa-key"></i> Quản lý đăng nhập</asp:HyperLink>
+                <asp:HyperLink ID="lnkDangXuat" runat="server" NavigateUrl="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</asp:HyperLink>
+            </div>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div class="footer">Khoa CNTT / Lớp TT1Đ23 - Trường ĐH CNVT</div>
+
+    </div>
+</form>
+</body>
+</html>
